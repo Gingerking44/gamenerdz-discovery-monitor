@@ -30,6 +30,8 @@ TARGET_PATTERNS = [
 BOX_TERMS = [
     "booster box",
     "display box",
+    "booster",
+    "box",
 ]
 
 ONE_PIECE_TERMS = [
@@ -82,8 +84,8 @@ def title_matches(title: str, href: str) -> bool:
     hay = normalize(f"{title} {href}")
 
     has_set = any(term in hay for term in TARGET_PATTERNS)
-    has_box = any(term in hay for term in BOX_TERMS)
     has_one_piece = any(term in hay for term in ONE_PIECE_TERMS)
+    has_boxish = any(term in hay for term in box_terms)
 
     return has_set and has_box and has_one_piece
 
