@@ -145,8 +145,6 @@ def main() -> None:
             f"URL: {product_url}"
         )
 
-    send_discord("✅ TEST MESSAGE from Game Nerdz discovery monitor")
-
     save_seen(current_seen)
     print("Saved seen URLs:", len(current_seen))
 
