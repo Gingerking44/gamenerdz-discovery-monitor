@@ -85,7 +85,7 @@ def title_matches(title: str, href: str) -> bool:
 
     has_set = any(term in hay for term in TARGET_PATTERNS)
     has_one_piece = any(term in hay for term in ONE_PIECE_TERMS)
-    has_boxish = any(term in hay for term in box_terms)
+    has_boxish = any(term in hay for term in BOX_TERMS)
 
     return has_set and has_box and has_one_piece
 
